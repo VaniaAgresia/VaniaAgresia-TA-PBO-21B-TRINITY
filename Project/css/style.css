@@ -470,3 +470,73 @@ header {
     height: 300px; /* Sesuaikan tinggi peta */
     border: none;
   }
+
+  /* Bagian Registrasi */
+  /* Gaya untuk halaman */
+  header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  main {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    transition: border-bottom-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-bottom-color: #333;
+    outline: none;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+
+  /* Media query untuk tampilan di desktop */
+@media (min-width: 768px) {
+  main {
+    max-width: 600px;
+  }
+}
+
+/* Media query untuk tampilan di hp */
+@media (max-width: 767px) {
+  main {
+    padding: 10px;
+  }
+}
+/* Registrasi Selesai */
