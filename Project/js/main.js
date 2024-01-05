@@ -1,54 +1,23 @@
-(function ($) {
-    "use strict";
+// Nav bar start
+const burger = document.querySelector('.burger')
+const sidebar = document.querySelector('.sidebar')
+const bgSidebar = document.querySelector('.bg-sidebar')
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
-    
-    
-    // Initiate the wowjs
-    new WOW().init();
+burger.addEventListener('click', function() {
+  this.classList.toggle('change')
+  sidebar.classList.toggle('change')
+  bgSidebar.classList.toggle('change')
+})
 
-
-    // Sticky Navbar
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.sticky-top').addClass('shadow-sm').css('top', '0px');
-        } else {
-            $('.sticky-top').removeClass('shadow-sm').css('top', '-100px');
-        }
-    });
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
+bgSidebar.addEventListener('click', function() {
+  this.classList.remove('change')
+  sidebar.classList.remove('change')
+  burger.classList.remove('change')
+})
+// Nav bar end
 
 
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        items: 1,
-        dots: true,
-        loop: true,
-    });
-
-    
-})(jQuery);
-
+function klikKotak(element) {
+  alert("Anda mengklik " + element.querySelector("p").innerText);
+  // efek klik pada kotak
+}
