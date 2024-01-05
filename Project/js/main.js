@@ -21,3 +21,16 @@ function klikKotak(element) {
   alert("Anda mengklik " + element.querySelector("p").innerText);
   // efek klik pada kotak
 }
+
+// Bagian Registrasi
+document.getElementById('registration-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  // Dapatkan nilai dari input
+  const nama = document.getElementById('nama').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // validasi 
+  console.log(`Nama: ${nama}, Email: ${email}, Password: ${password}`);
+  // mengirim data ke server atau melakukan validasi lebih lanjut
+});
