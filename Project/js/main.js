@@ -33,4 +33,8 @@ document.getElementById('registration-form').addEventListener('submit', function
   // validasi 
   console.log(`Nama: ${nama}, Email: ${email}, Password: ${password}`);
   // mengirim data ke server atau melakukan validasi lebih lanjut
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> c3b1ad71ae5b81da3ebf7688453acd23a8df720e
