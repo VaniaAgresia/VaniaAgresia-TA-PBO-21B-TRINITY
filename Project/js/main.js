@@ -23,8 +23,6 @@ function klikKotak(element) {
 }
 
 // Bagian Registrasi
-// script.js
-
 function validateName() {
   // Validasi dan pemrosesan input Nama Lengkap
   var fullNameInput = document.getElementById('fullName');
@@ -45,32 +43,43 @@ function validateForm() {
   var password = document.getElementById('password').value;
 
   // Validasi input di sini
-  // Misalnya, dapat ditambahkan logika validasi sesuai kebutuhan
 
-  // Contoh sederhana: Nama tidak boleh kosong
+  // Nama tidak boleh kosong
   if (fullName.trim() === "") {
       alert("Nama Lengkap tidak boleh kosong.");
       return;
   }
 
-  // Contoh sederhana: Nomor HP harus angka
+  // Nomor HP harus angka
   if (!/^\d+$/.test(phoneNumber)) {
       alert("Nomor HP hanya boleh diisi dengan angka.");
       return;
   }
 
-  // Contoh sederhana: Email harus memiliki format yang benar
+  // Email harus memiliki format yang benar
   if (!/\S+@\S+\.\S+/.test(email)) {
       alert("Format Email tidak valid.");
       return;
   }
 
-  // Contoh sederhana: Password harus memiliki panjang minimal 8 karakter
+  // Password harus memiliki panjang minimal 8 karakter
   if (password.length < 8) {
       alert("Password harus memiliki panjang minimal 8 karakter.");
       return;
   }
 
-  // Jika semua validasi berhasil, Anda dapat melanjutkan dengan pengiriman formulir atau tindakan lainnya.
+  // Jika semua validasi berhasil, melanjutkan dengan pengiriman formulir atau tindakan lainnya.
   alert("Formulir berhasil divalidasi. Data dapat diirim ke server.");
 }
+
+// bagian berita
+document.addEventListener('DOMContentLoaded', function () {
+  const readMoreLinks = document.querySelectorAll('.read-more');
+
+  readMoreLinks.forEach(link => {
+      link.addEventListener('click', function (event) {
+          event.preventDefault();
+          alert('Baca lebih lanjut: ' + this.previousElementSibling.textContent);
+      });
+  });
+});
