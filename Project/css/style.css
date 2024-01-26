@@ -523,3 +523,32 @@ header {
   }
 }
 
+/* Bagian berita */
+#news-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.news-item {
+  width: 300px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.news-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.read-more {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  color: #007BFF;
+  cursor: pointer;
+}
