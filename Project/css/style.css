@@ -472,59 +472,42 @@ header {
   }
 
   /* Bagian Registrasi */
-  /* Gaya untuk halaman */
-  header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  main {
-    padding: 20px;
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .input-group {
-    margin-bottom: 20px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #ccc;
-    background-color: transparent;
-    transition: border-bottom-color 0.3s ease;
-  }
-  
-  input[type="text"]:focus,
-  input[type="email"]:focus,
-  input[type="password"]:focus {
-    border-bottom-color: #333;
-    outline: none;
-  }
-  
-  button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #555;
-  }
+/* formulir dengan kelas "custom-registration-form" */
+.custom-registration-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: auto; /* Menengahkan formulir */
+}
+
+/* untuk input dengan kelas "custom-input" */
+.custom-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* untuk tombol dengan kelas "custom-button" */
+.custom-button {
+  background-color: #001f3f;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* efek saat tombol dihover */
+.custom-button:hover {
+  background-color: #003366;
+}
+
 
   /* Media query untuk tampilan di desktop */
 @media (min-width: 768px) {
@@ -539,8 +522,4 @@ header {
     padding: 10px;
   }
 }
-<<<<<<< HEAD
-/* Registrasi Selesai */
-=======
-/* Registrasi Selesai */
->>>>>>> c3b1ad71ae5b81da3ebf7688453acd23a8df720e
+

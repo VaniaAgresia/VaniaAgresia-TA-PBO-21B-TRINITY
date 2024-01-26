@@ -38,40 +38,37 @@
       <li><a href="#" class="active">Daftar</a></li>
     </ul>
   </nav>
+  </body>
 <!-- Navbar Selesai -->
 
 <!-- Daftar -->
-<header>
-    <h1>Formulir Pendaftaran</h1>
-  </header>
+<!-- Formulir Pendaftaran dengan kelas "custom-registration-form" -->
+<form class="custom-registration-form">
+  <label for="fullName">Nama Lengkap:</label>
+  <!-- Input Nama Lengkap dengan ID "fullName" dan validasi -->
+  <input type="text" id="fullName" name="fullName" class="custom-input" pattern="[A-Za-z ]+" title="Hanya huruf diizinkan" oninput="validateName()" oncut="return false;" oncopy="return false;" onpaste="return false;" required>
 
-  <main>
-    <form id="registration-form">
-      <div class="input-group">
-        <label for="nama">Nama:</label>
-        <input type="text" id="nama" name="nama" required>
-      </div>
-      <div class="input-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="input-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-      </div>
-      <button type="submit">Daftar</button>
-    </form>
-  </main>
-<!-- Daftar Selesai -->
+  <label for="phoneNumber">Nomor HP:</label>
+  <!-- Input Nomor HP dengan ID "phoneNumber" dan validasi -->
+  <input type="tel" id="phoneNumber" name="phoneNumber" class="custom-input" pattern="[0-9]+" title="Hanya angka diizinkan" oninput="validatePhoneNumber()" oncut="return false;" oncopy="return false;" onpaste="return false;" required>
 
+  <label for="email">Email:</label>
+  <!-- Input Email dengan ID "email" -->
+  <input type="email" id="email" name="email" class="custom-input" required>
 
+  <label for="password">Password:</label>
+  <!-- Input Password dengan ID "password" -->
+  <input type="password" id="password" name="password" class="custom-input" required>
 
+  <!-- Tombol Daftar dengan fungsi onclick "validateForm" -->
+  <button type="button" onclick="validateForm()" class="custom-button">Daftar</button>
+</form>
 
   <!-- Footer -->
   <footer>
     <div class="footer-info">
       <h2>SMP Tunas Dharma</h2>
-      <p>Jl. Seno No.8, Waygalih, Kecamayan Tanjung bintang Kabupaten Lampung Selatan, Lampung, Indonesia</p>
+      <p>Jl. Seno No.8, Waygalih, Kecamatan Tanjung bintang Kabupaten Lampung Selatan, Lampung, Indonesia</p>
       <p>Email: info@smp_tunas_dharma.com</p>
       <p>Telepon: (123) 456-7890</p>
     </div>
@@ -80,8 +77,5 @@
     </div>
   </footer>
   <center><p><h5>© SMP TUNAS DHARMA, All Right Reserved.</h5></p></center>
-
-
-
 </body>
 </html>

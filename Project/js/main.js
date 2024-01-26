@@ -23,18 +23,54 @@ function klikKotak(element) {
 }
 
 // Bagian Registrasi
-document.getElementById('registration-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  // Dapatkan nilai dari input
-  const nama = document.getElementById('nama').value;
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+// script.js
 
-  // validasi 
-  console.log(`Nama: ${nama}, Email: ${email}, Password: ${password}`);
-  // mengirim data ke server atau melakukan validasi lebih lanjut
-<<<<<<< HEAD
-});
-=======
-});
->>>>>>> c3b1ad71ae5b81da3ebf7688453acd23a8df720e
+function validateName() {
+  // Validasi dan pemrosesan input Nama Lengkap
+  var fullNameInput = document.getElementById('fullName');
+  fullNameInput.value = fullNameInput.value.replace(/[^A-Za-z ]/g, '');
+}
+
+function validatePhoneNumber() {
+  // Validasi dan pemrosesan input Nomor HP
+  var phoneNumberInput = document.getElementById('phoneNumber');
+  phoneNumberInput.value = phoneNumberInput.value.replace(/\D/g, ''); // Hanya angka diizinkan
+}
+
+function validateForm() {
+  // Validasi formulir saat tombol "Daftar" ditekan
+  var fullName = document.getElementById('fullName').value;
+  var phoneNumber = document.getElementById('phoneNumber').value;
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+
+  // Validasi input di sini
+  // Misalnya, dapat ditambahkan logika validasi sesuai kebutuhan
+
+  // Contoh sederhana: Nama tidak boleh kosong
+  if (fullName.trim() === "") {
+      alert("Nama Lengkap tidak boleh kosong.");
+      return;
+  }
+
+  // Contoh sederhana: Nomor HP harus angka
+  if (!/^\d+$/.test(phoneNumber)) {
+      alert("Nomor HP hanya boleh diisi dengan angka.");
+      return;
+  }
+
+  // Contoh sederhana: Email harus memiliki format yang benar
+  if (!/\S+@\S+\.\S+/.test(email)) {
+      alert("Format Email tidak valid.");
+      return;
+  }
+
+  // Contoh sederhana: Password harus memiliki panjang minimal 8 karakter
+  if (password.length < 8) {
+      alert("Password harus memiliki panjang minimal 8 karakter.");
+      return;
+  }
+
+  // Jika semua validasi berhasil, Anda dapat melanjutkan dengan pengiriman formulir atau tindakan lainnya.
+  alert("Formulir berhasil divalidasi. Data dapat diirim ke server.");
+}
