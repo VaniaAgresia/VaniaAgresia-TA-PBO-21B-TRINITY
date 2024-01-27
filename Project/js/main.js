@@ -85,3 +85,4 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // bagian galeri
+// plis ini js jangan dianeh anehin

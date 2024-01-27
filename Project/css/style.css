@@ -623,3 +623,25 @@ header {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
 }
+
+/* tentang sekolah */
+main section {
+  margin-bottom: 20px;
+}
+
+.history-container {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+history-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.history-container p {
+  padding: 20px;
+}
